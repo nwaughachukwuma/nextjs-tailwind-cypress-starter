@@ -1,5 +1,9 @@
 {
   "nodeVersion": "system",
   "testFiles": "**/*.spec.{ts,js}",
-  "ignoreTestFiles": "**/examples/**/*.spec.{ts,js}"
+  "ignoreTestFiles": "**/examples/**/*.spec.{ts,tsx,js,jsx}",
+  "component": {
+    "componentFolder": ".",
+    "testFiles": "**/*.spec.ct.{ts,tsx,js,jsx}"
+  }
 }
