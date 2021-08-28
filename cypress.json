@@ -1,5 +1,5 @@
 {
-    "nodeVersion": "system",
-    "testFiles": "**/*.spec.{ts,js}",
-    "ignoreTestFiles": "**/examples/**/*.spec.{ts,js}"
+  "nodeVersion": "system",
+  "testFiles": "**/*.spec.{ts,js}",
+  "ignoreTestFiles": "**/examples/**/*.spec.{ts,js}"
 }
