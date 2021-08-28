@@ -1,6 +1,5 @@
 /* global cy */
-import * as React from 'react'
-import { mount } from '@cypress/react'
+import { mount } from '../utils/remount'
 import Button from './Button'
 
 it('Can render Button component', () => {
