@@ -1,8 +1,7 @@
-const injectDevServer = require('@cypress/react/plugins/next')
+import injectDevServer from '@cypress/react/plugins/next'
 
 const config: Cypress.PluginConfig = (on, config) => {
-  injectDevServer(on, config)
-  return config
+  return injectDevServer(on, config)
 }
 
 export default config
