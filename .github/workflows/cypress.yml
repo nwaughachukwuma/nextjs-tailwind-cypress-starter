@@ -1,0 +1,51 @@
+name: Cypress
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.pnpm-store
+            **/node_modules
+            ~/.cache/Cypress
+          key: ${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.12.1
+      - run: pnpm install
+      - run: pnpm build
+      # used to create dummy package-lock.json needed by cypress-io/github-action@v2
+      - run: echo "{\"name\"\x3A \"nextjs-tailwind-cypress-starter\", \"version\"\x3A \"0.1.0\"}" > package-lock.json
+
+      - name: e2e tests 🧪
+        uses: cypress-io/github-action@v2
+        with:
+          install: false
+          start: pnpm start
+          wait-on: 'http://127.0.0.1:3000'
+          command: pnpm cy:run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: component tests 🧪
+        uses: cypress-io/github-action@v2
+        with:
+          install: false
+          command: pnpm cy:run-ct
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

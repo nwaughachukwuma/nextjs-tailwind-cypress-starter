@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "dom"],
+    "types": ["cypress"]
+  },
+  "include": ["../node_modules/cypress", "**/*.ts", "**/*.tsx"],
+  "extends": "../tsconfig.json",
+  "exclude": []
+}

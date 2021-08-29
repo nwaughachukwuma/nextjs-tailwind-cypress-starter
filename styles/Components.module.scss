@@ -1,0 +1,41 @@
+@import 'animations';
+
+.primary__button {
+  --btn-bg-color: 80, 80, 80;
+  --btn-bg-opacity: 0.8;
+  --btn-text-color: white;
+  $bgColor: var(--btn-bg-color);
+  $bgAlpha: var(--btn-bg-opacity);
+
+  display: block;
+  width: 80%;
+  left: 10%;
+  margin: 0 auto;
+
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  background-color: rgba($color: $bgColor, $alpha: $bgAlpha);
+  color: var(--btn-text-color);
+
+  transition: all 400ms ease-in-out;
+  cursor: pointer;
+
+  text-transform: uppercase;
+
+  &:hover {
+    --btn-bg-color: 0, 0, 0;
+    --btn-bg-opacity: 1;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: translateY(4px);
+  }
+}
+
+.tw__button {
+  @apply block;
+}

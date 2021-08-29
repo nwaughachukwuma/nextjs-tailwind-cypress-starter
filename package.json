@@ -1,0 +1,57 @@
+{
+  "name": "nextjs-tailwind-cypress-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "./scripts/prepare.sh",
+    "tsc": "tsc -b",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cy:test": "cypress open",
+    "cy:run": "cypress run",
+    "cy:test-ct": "cypress open-ct",
+    "cy:run-ct": "cypress run-ct"
+  },
+  "dependencies": {
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@cypress/react": "^5.9.4",
+    "@cypress/webpack-dev-server": "^1.4.0",
+    "@types/react": "^17.0.19",
+    "autoprefixer": "^10.3.3",
+    "css-loader": "^6.2.0",
+    "cypress": "^8.3.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "html-webpack-plugin": "5",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-tailwind": "^2.2.12",
+    "sass": "^1.38.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "tailwindcss": "^2.2.8",
+    "typescript": "^4.4.2",
+    "webpack": "5",
+    "webpack-dev-server": "3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,scss,md}": "prettier --write --ignore-unknown"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ]
+}
