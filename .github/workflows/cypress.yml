@@ -38,8 +38,9 @@ jobs:
       - name: e2e tests 🧪
         uses: cypress-io/github-action@v2
         with:
-          start: |
-            pnpm start
+          install: false
+          cache-key: ${{ hashFiles('**/pnpm-lock.yaml') }}
+          start: pnpm start
           wait-on: 'http://127.0.0.1:3000'
           command: pnpm cy:run
         env:
