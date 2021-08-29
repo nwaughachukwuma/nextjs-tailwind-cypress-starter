@@ -1,4 +1,4 @@
-# Send Crypto ![cypress version](https://img.shields.io/badge/cypress-8.3.1-brightgreen)
+# nextjs-tailwind-cypress-starter ![cypress version](https://img.shields.io/badge/cypress-8.3.1-brightgreen)
 
 [![Cypress](https://github.com/nwaughachukwuma/nextjs-tailwind-cypress-starter/actions/workflows/cypress.yml/badge.svg)](https://github.com/nwaughachukwuma/nextjs-tailwind-cypress-starter/actions/workflows/cypress.yml)
 [![Type Check](https://github.com/nwaughachukwuma/nextjs-tailwind-cypress-starter/actions/workflows/types-check.yml/badge.svg)](https://github.com/nwaughachukwuma/nextjs-tailwind-cypress-starter/actions/workflows/types-check.yml)
