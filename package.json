@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "prepare": "./scripts/prepare.sh",
+    "tsc": "tsc -b",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
