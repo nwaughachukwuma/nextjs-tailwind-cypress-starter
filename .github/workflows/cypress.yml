@@ -32,8 +32,7 @@ jobs:
           version: 6.12.1
 
       - run: pnpm install
-      - run: pnpm build
-      - run: echo "{\"name\"\x3A \"lumiere\", \"version\"\x3A \"0.0.1\"}" > package-lock.json
+      - run: echo "{\"name\"\x3A \"send-crypto\", \"version\"\x3A \"0.1.0\"}" > package-lock.json
 
       - name: e2e tests 🧪
         uses: cypress-io/github-action@v2
