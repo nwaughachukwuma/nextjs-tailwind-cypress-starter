@@ -28,6 +28,7 @@ jobs:
         with:
           version: 6.12.1
       - run: pnpm install
+      - run: pnpm build
       # used to create dummy package-lock.json needed by cypress-io/github-action@v2
       - run: echo "{\"name\"\x3A \"send-crypto\", \"version\"\x3A \"0.1.0\"}" > package-lock.json
 
