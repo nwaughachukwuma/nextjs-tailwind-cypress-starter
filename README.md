@@ -1,4 +1,4 @@
-# Send Crypto
+# Send Crypto ![cypress version](https://img.shields.io/badge/cypress-8.3.1-brightgreen)
 
 [![ci status][ci image]][ci url] [![badges status][badges image]][badges url]
 
