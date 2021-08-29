@@ -18,6 +18,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
+          cache: 'pnpm'
+          cache-dependency-path: |
+            ~/.pnpm-store
+            **/node_modules
+            ~/.cache/Cypress
 
       - uses: actions/cache@v2
         with:
@@ -42,6 +47,8 @@ jobs:
             pnpm start
           wait-on: 'http://127.0.0.1:3000'
           command: pnpm cy:run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: component tests 🧪
         uses: cypress-io/github-action@v2
@@ -49,3 +56,5 @@ jobs:
           # we have already installed everything
           install: false
           command: pnpm cy:run-ct
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
