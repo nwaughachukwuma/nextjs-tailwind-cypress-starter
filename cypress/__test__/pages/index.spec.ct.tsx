@@ -1,6 +1,5 @@
-import * as React from 'react'
 import { mount } from '@cypress/react'
-import Home from './index'
+import Home from '../../../pages/index'
 
 it('Renders home page', () => {
   mount(<Home />)

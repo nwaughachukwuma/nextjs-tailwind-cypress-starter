@@ -3,7 +3,7 @@
   "testFiles": "**/*.spec.{ts,js}",
   "ignoreTestFiles": "**/examples/**/*.spec.{ts,tsx,js,jsx}",
   "component": {
-    "componentFolder": ".",
+    "componentFolder": "cypress/__test__",
     "testFiles": "**/*.spec.ct.{ts,tsx,js,jsx}"
   }
 }
