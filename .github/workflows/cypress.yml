@@ -1,0 +1,27 @@
+name: Cypress
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo 🛎
+        uses: actions/checkout@v2
+
+      - name: e2e tests 🧪
+        uses: cypress-io/github-action@v2
+        with:
+          command: pnpm cy:run
+
+      - name: component tests 🧪
+        uses: cypress-io/github-action@v2
+        with:
+          # we have already installed everything
+          install: false
+          # to run component tests we need to use "cypress run-ct"
+          command: pnpm cy:run-ct
