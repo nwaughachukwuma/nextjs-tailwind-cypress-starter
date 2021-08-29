@@ -30,7 +30,7 @@ jobs:
       - run: pnpm install
       - run: pnpm build
       # used to create dummy package-lock.json needed by cypress-io/github-action@v2
-      - run: echo "{\"name\"\x3A \"send-crypto\", \"version\"\x3A \"0.1.0\"}" > package-lock.json
+      - run: echo "{\"name\"\x3A \"nextjs-tailwind-cypress-starter\", \"version\"\x3A \"0.1.0\"}" > package-lock.json
 
       - name: e2e tests 🧪
         uses: cypress-io/github-action@v2
