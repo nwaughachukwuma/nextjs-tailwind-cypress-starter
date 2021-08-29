@@ -14,4 +14,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: npm run tsc
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.pnpm-store
+            **/node_modules
+            ~/.cache/Cypress
+          key: ${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.12.1
+      - run: pnpm install
+      - run: pnpm tsc
