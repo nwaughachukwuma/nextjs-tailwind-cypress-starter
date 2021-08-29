@@ -22,21 +22,30 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: |
-            ~/.npm-store
+            ~/.pnpm-store
             **/node_modules
+            ~/.cache/Cypress
           key: ${{ hashFiles('**/pnpm-lock.yaml') }}
 
-      - run: npm install
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.12.1
+
+      - run: pnpm install
+      - run: pnpm build
+      - run: echo "{\"name\"\x3A \"lumiere\", \"version\"\x3A \"0.0.1\"}" > package-lock.json
 
       - name: e2e tests 🧪
         uses: cypress-io/github-action@v2
         with:
-          command: npm run cy:run
+          start: |
+            pnpm start
+          wait-on: 'http://127.0.0.1:3000'
+          command: pnpm cy:run
 
       - name: component tests 🧪
         uses: cypress-io/github-action@v2
         with:
           # we have already installed everything
           install: false
-          # to run component tests we need to use "cypress run-ct"
-          command: npm run cy:run-ct
+          command: pnpm cy:run-ct
