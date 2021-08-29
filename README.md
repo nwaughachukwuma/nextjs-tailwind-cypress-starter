@@ -1,9 +1,5 @@
 # Send Crypto ![cypress version](https://img.shields.io/badge/cypress-8.3.1-brightgreen)
 
-## CI Workflows - badges
-
-[![ci status][ci image]][ci url]
-
 [![Cypress](https://github.com/nwaughachukwuma/send-crypto/actions/workflows/cypress.yml/badge.svg)](https://github.com/nwaughachukwuma/send-crypto/actions/workflows/cypress.yml)
 [![Type Check](https://github.com/nwaughachukwuma/send-crypto/actions/workflows/types-check.yml/badge.svg)](https://github.com/nwaughachukwuma/send-crypto/actions/workflows/types-check.yml)
 
