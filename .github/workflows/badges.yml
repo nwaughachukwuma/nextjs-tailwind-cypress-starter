@@ -1,0 +1,29 @@
+name: badges
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - package.json
+      - .github/workflows/badges.yml
+  schedule:
+    - cron: '0 4 * * 6'
+
+jobs:
+  badges:
+    name: Badges
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+
+      - name: Update version badges 🏷
+        run: npx -p dependency-version-badge update-badge cypress
+
+      - name: Commit any changed files 💾
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updated badges
+          branch: main
+          file_pattern: README.md

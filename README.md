@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Send Crypto
+
+[![ci status][ci image]][ci url] [![badges status][badges image]][badges url]
 
 ## Getting Started
 
