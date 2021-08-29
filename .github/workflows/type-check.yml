@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  cypress_test:
+  check_types:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
