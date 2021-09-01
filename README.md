@@ -18,3 +18,15 @@ yarn dev
 # or
 pnpm dev
 ```
+
+## 📁 Project Structure
+
+Organized the same way as every next.js project created with `create-next-app`.
+
+### 🦾 Tailwindcss
+
+Referenced at the root component allowing you to use Tailwind classes without having to import any css file, except for abstracted reusable Tailwind styles.
+
+### 🧪 Cypress
+
+There's support for both e2e testing and component testing. e2e testing files can be found in integrations folder and are run with `cy:test` and `cy:run`, while component testing files can be found in **test** folder and are run with `cy:test-ct` and `cy:run-ct`.
